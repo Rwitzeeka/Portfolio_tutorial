@@ -29,7 +29,8 @@
         </div>
 
     </div>
-    <!-- -----------------about-------------- -->
+
+    <!-- -----------------ABOUT-------------- -->
 
     <div id="about">
         <div class="container">
@@ -46,15 +47,33 @@
                         hic rerum incidunt repellat ullam!</p>
 
                     <div class="tab-title">
-                        <p class="tab-links">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
+                    <div class="table-contents active-tab" id="Skills">
+                        <ul>
+                            <li> <span>UI/UX</span> <br> Designing Web/App interface</li>
+                            <li> <span>Web-Development</span> <br> Web app development</li>
+                            <li> <span>App Development</span> <br> Building Android/iOS apps</li>
 
-
-
-
-
+                        </ul>
+                    </div>
+                    <div class="table-contents" id="Experience">
+                        <ul>
+                            <li> <span>2024-current</span> <br> UI/UX designer at TLF.co</li>
+                            <li> <span>2020-2024</span> <br> Technical Lead atartup at LLC</li>
+                            <li> <span>2022-2024</span> <br> UI/UX Executive at Coin Digital limited </li>
+                            <li> <span>2018-2020</span> <br>Internship at Flipkart India</li>
+                        </ul>
+                    </div>
+                    <div class="table-contents" id="Education">
+                        <ul>
+                            <li> <span>2020</span> <br> UI/UX Design training at DICE academy</li>
+                            <li> <span>2020</span> <br> MBA from IIT-kanpur</li>
+                            <li> <span>2018</span> <br> BBA from ISM Banglore</li>
+                        </ul>
+                    </div>
                 </div>
 
 
@@ -62,6 +81,43 @@
         </div>
     </div>
     </div>
+
+    <!------------------------ SERVICES------------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle"> My Services</h1>
+            <div class="services-list"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tablecontents = document.getElementsByClassName("table-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tablecontent of tablecontents) {
+                tablecontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("tab-links");
+            document.getElementById(tabname).classList.add("active-tab")
+
+        }
+
+
+
+
+
+
+    </script>
+
+
 
 
 
