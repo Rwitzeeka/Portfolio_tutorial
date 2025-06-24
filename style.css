@@ -149,6 +149,71 @@ nav ul li a:hover::after {
 
 #services {
     padding: 30px 0;
+}
 
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
 
+.services-list div {
+    background-color: #262626;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 5%;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list i {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.services-list div h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.services-list div p {
+    margin-bottom: 20px;
+
+}
+
+.services-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 40px;
+    display: inline block;
+}
+
+.services-list div:hover {
+    background-color: rgb(175, 53, 53);
+    transform: translateY(-10px);
+
+}
+
+/* -------------------Portfolio-------------------- */
+#portfolio {
+    padding: 50px 0;
+}
+
+.subtitle {
+    margin-bottom: 50px;
+}
+
+.worklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
